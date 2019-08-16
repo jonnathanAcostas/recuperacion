@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Recuperación
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-button (click)="tomarFoto()"> Toma una foto</ion-button>
+<img *ngIf="image" [src]="image" alt="image">
+
+<p>Latitud: {{galery.latitud}}</p>
+<p>Longitud: {{galery.longitud}}</p>
+
+<ion-label position="floating">Descripción</ion-label>
+                <ion-input type="text" [(ngModel)]="galery.descripcion"></ion-input>
+
+                <button ion-button block class="btn btn-warning" (click)="postgalery()">sincronizar</button>
+
+
+</ion-content>
